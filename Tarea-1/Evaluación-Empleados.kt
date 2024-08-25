@@ -1,7 +1,7 @@
 // Script que evalúa el rendimiento de un empleado basado en su puntuación y calcula el dinero extra que recibirá.
 // Autor: Rodrigo Ancori
 // Fecha creación: 24/08/2024
-// Fecha última modificación: 24/08/2024
+// Fecha última modificación: 25/08/2024
 
 fun calcularNivelYDinero(puntuacion: Int, salario: Double): Pair<String, Double> {
     val nivel = when (puntuacion) {
