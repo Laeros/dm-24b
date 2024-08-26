@@ -38,4 +38,14 @@ fun main() {
     println("Nivel de Rendimiento: $nivel")
     // Muestra el dinero extra que recibirá el empleado
     println("Cantidad de Dinero Recibido: $$dinero")
+    
+    // Funcionalidad adicional: Cálculo del dinero extra acumulado en varios meses
+    print("Introduce el número de meses para calcular el dinero extra acumulado: ")
+    // Lee el número de meses del usuario, con manejo de errores en caso de entrada no válida
+    val meses = readLine()?.toIntOrNull() ?: 1
+
+    // Calcula el dinero extra acumulado
+    val dineroAcumulado = dinero * meses
+    // Muestra el dinero extra acumulado durante el número de meses especificado
+    println("Dinero Extra Acumulado en $meses mes(es): $$dineroAcumulado") 
 }
