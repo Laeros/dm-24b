@@ -57,3 +57,20 @@ class Revista(
     }
 }
 
+// Data class para representar a un usuario
+data class Usuario(
+    val nombre: String,
+    val apellido: String,
+    val edad: Int
+)
+
+// Interfaz que define las operaciones de una biblioteca
+interface IBiblioteca {
+    fun registrarMaterial(material: Material)
+    fun registrarUsuario(usuario: Usuario)
+    fun prestarMaterial(titulo: String, usuario: Usuario): Boolean
+    fun devolverMaterial(titulo: String, usuario: Usuario): Boolean
+    fun mostrarMaterialesDisponibles()
+    fun mostrarMaterialesReservadosPorUsuario(usuario: Usuario)
+}
+
