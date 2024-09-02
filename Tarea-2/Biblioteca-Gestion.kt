@@ -33,3 +33,27 @@ class Libro(
         println("Número de páginas: $numeroPaginas")
     }
 }
+
+// Subclase que representa una revista, hereda de Material
+class Revista(
+    titulo: String,
+    autor: String,
+    anioPublicacion: Int,
+    val issn: String,
+    val volumen: Int,
+    val numero: Int,
+    val editorial: String
+) : Material(titulo, autor, anioPublicacion) {
+
+    // Mostrar los detalles de la revista
+    override fun mostrarDetalles() {
+        println("Revista: $titulo")
+        println("Autor: $autor")
+        println("Año de publicación: $anioPublicacion")
+        println("ISSN: $issn")
+        println("Volumen: $volumen")
+        println("Número: $numero")
+        println("Editorial: $editorial")
+    }
+}
+
