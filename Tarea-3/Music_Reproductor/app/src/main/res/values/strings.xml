@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Music_Reproductor</string>
+
+    <string-array name="songs_array">
+        <item>Audio 1</item>
+        <item>Audio 2</item>
+        <item>Audio 3</item>
+        <item>Audio 4</item>
+        <item>Audio 5</item>
+    </string-array>
+</resources>
