@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">InteraccionImagen</string>
+
+    <string-array name="image_names">
+        <item>Imagen 1</item>
+        <item>Imagen 2</item>
+        <item>Imagen 3</item>
+    </string-array>
+
+</resources>
