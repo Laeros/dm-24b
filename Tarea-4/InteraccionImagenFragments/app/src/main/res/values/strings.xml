@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">InteraccionImagenFragments</string>
+
+    <string-array name="image_options">
+        <item>Image 1</item>
+        <item>Image 2</item>
+        <item>Image 3</item>
+    </string-array>
+    <string name="button_select_image">Seleccione otra imagen</string>
+    <string name="button_next">Next</string>
+    <string name="button_back">Back</string>
+    <string name="image_description">Selected Image</string>
+    <string name="image_options">Image Options</string>
+    <string name="spinner_description">Seleccione una imagen</string>
+    <string name="button_next_text">Siguiente</string>
+
+</resources>
