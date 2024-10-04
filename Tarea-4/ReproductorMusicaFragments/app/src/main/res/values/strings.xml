@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ReproductorMusicaFragments</string>
+
+    <string name="player_title">Music Player</string>
+    <string name="play_button">Play</string>
+    <string name="pause_button">Pause</string>
+    <string name="select_song">Seleccionar una canción</string>
+    <string name="back_button">Regresar</string>
+</resources>
