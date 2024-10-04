@@ -22,6 +22,7 @@ class MusicPlayerFragment : Fragment() {
     private var audioName: String? = null
     private var audioImageResId: Int = 0
     private var audioResId: Int = 0
+    private var isPlaying: Boolean = false // Bandera para controlar la reproducción
 
     companion object {
         fun newInstance(audio: Audio): MusicPlayerFragment {
@@ -55,6 +56,7 @@ class MusicPlayerFragment : Fragment() {
         val playButton = view.findViewById<Button>(R.id.play_button)
         val pauseButton = view.findViewById<Button>(R.id.pause_button)
         val stopButton = view.findViewById<Button>(R.id.stop_button)
+        val backButton = view.findViewById<Button>(R.id.back_button) // Nuevo botón para regresar
 
         audioNameTextView.text = audioName
         audioImageView.setImageResource(audioImageResId)
@@ -62,12 +64,20 @@ class MusicPlayerFragment : Fragment() {
         mediaPlayer = MediaPlayer.create(context, audioResId)
 
         playButton.setOnClickListener {
+            // Detener la canción si ya se está reproduciendo
+            if (isPlaying) {
+                mediaPlayer.stop()
+                mediaPlayer.reset()
+                mediaPlayer = MediaPlayer.create(context, audioResId)
+            }
             mediaPlayer.start()
+            isPlaying = true
         }
 
         pauseButton.setOnClickListener {
             if (mediaPlayer.isPlaying) {
                 mediaPlayer.pause()
+                isPlaying = false
             }
         }
 
@@ -75,6 +85,11 @@ class MusicPlayerFragment : Fragment() {
             mediaPlayer.stop()
             mediaPlayer.reset()
             mediaPlayer = MediaPlayer.create(context, audioResId)
+            isPlaying = false
+        }
+
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
         }
     }
 
